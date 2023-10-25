@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572946848899",
+    "project_id": "pecocareapptest",
+    "storage_bucket": "pecocareapptest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572946848899:android:8a3c343aa56664043ccfb6",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQoRq897gjGNdeqbdMniO3Ad8uDXSWJKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
