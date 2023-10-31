@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+// import 'dart:convert';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,15 +13,8 @@ void main() async {
   );
 }
 
-class WebViewApp extends StatefulWidget {
-  const WebViewApp({Key? key}) : super(key: key);
-
-  @override
-  State<WebViewApp> createState() => _WebViewAppState();
-}
-
-class _WebViewAppState extends State<WebViewApp> {
-  WebViewController controller = WebViewController()
+class WebViewState extends State<WebViewApp> {
+    final WebViewController _controller = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(const Color(0x00000000))
     ..setNavigationDelegate(
@@ -37,14 +30,22 @@ class _WebViewAppState extends State<WebViewApp> {
     )
     ..loadRequest(
       Uri.parse("https://peco.care/home"),
+      // headers: {"Authorization": "Basic " + base64Encode(utf8.encode("peco_user:%7YrWQzG\$u"))},
     );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: WebViewWidget(controller: controller),
+        child: WebViewWidget(controller: _controller),
       ),
     );
   }
+}
+
+class WebViewApp extends StatefulWidget {
+  const WebViewApp({Key? key}) : super(key: key);
+
+  @override
+  WebViewState createState() => WebViewState();
 }
