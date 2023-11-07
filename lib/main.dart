@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/firebase_options.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
-// import 'dart:convert';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,8 +29,7 @@ class WebViewState extends State<WebViewApp> {
       ),
     )
     ..loadRequest(
-      Uri.parse("https://peco.care/home"),
-      // headers: {"Authorization": "Basic " + base64Encode(utf8.encode("peco_user:%7YrWQzG\$u"))},
+      Uri.parse("https://peco-care-front-kl498spbr-vetstech.vercel.app/home"),
     );
 
   @override
